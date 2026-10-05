@@ -1,0 +1,18 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+# Python
+__pycache__/
+*.pyc
+# Large data
+*.bag
+*.db3
+*.mcap
+rosbag2_*/
+# Firmware
+.pio/
+.vscode/
+# OS / IDE
+.DS_Store
+*.swp

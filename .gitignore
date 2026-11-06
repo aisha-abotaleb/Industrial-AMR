@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ROS 2 / colcon
 build/
 install/
@@ -16,3 +17,9 @@ rosbag2_*/
 # OS / IDE
 .DS_Store
 *.swp
+=======
+build/
+install/
+log/
+logs/
+>>>>>>> 600fc02 (feat: add Docking folder containing docking_ws and detect_april_tag)

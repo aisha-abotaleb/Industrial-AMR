@@ -1,0 +1,14 @@
+# Parameters for christianrauch/apriltag_ros (ros-humble-apriltag-ros)
+apriltag:                 # node name (must match name='apriltag' in the launch file)
+  ros__parameters:
+    image_transport: raw
+    family: 36h11
+    size: 0.16            # edge length (m) of the BLACK square of the tag (not the white margin)
+    max_hamming: 0
+    # Explicit on purpose: z_up=false -> standard AprilTag frame
+    # (x right, y down, z pointing INTO the tag/wall). dock_pose_publisher.py relies on this.
+    z_up: false
+    tag:
+      ids:    [0]
+      frames: [dock_tag]
+      sizes:  [0.16]

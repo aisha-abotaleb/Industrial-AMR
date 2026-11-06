@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>articubot_docking</name>
+  <version>0.1.0</version>
+  <description>AprilTag-based autonomous docking (Nav2 opennav_docking) for articubot_one on ROS 2 Humble</description>
+  <maintainer email="you@example.com">aisha</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>tf2_ros_py</exec_depend>
+  <exec_depend>apriltag_ros</exec_depend>
+  <exec_depend>image_proc</exec_depend>
+  <exec_depend>opennav_docking</exec_depend>
+  <exec_depend>opennav_docking_msgs</exec_depend>
+  <exec_depend>nav2_lifecycle_manager</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>articubot_one</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

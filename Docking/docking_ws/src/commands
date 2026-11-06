@@ -1,0 +1,14 @@
+#
+source /opt/ros/humble/setup.bash
+source ~/grad_project/docking_ws/install/setup.bash
+
+ros2 launch articubot_docking sim_dock.launch.py
+
+ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true slam_params_file:=/opt/ros/humble/share/slam_toolbox/config/mapper_params_online_async.yaml
+
+rviz2 --ros-args -p use_sim_time:=true
+
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/cmd_vel_joy
+
+

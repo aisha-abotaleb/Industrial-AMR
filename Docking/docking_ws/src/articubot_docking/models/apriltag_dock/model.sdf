@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <!-- Model origin = tag plane. The tag faces -X (towards the robot), the board is behind it (+X). -->
+  <model name="apriltag_dock">
+    <static>true</static>
+    <link name="link">
+
+      <visual name="board">
+        <pose>0.011 0 0.25 0 0 0</pose>
+        <geometry><box><size>0.02 0.5 0.5</size></box></geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+      <collision name="board_collision">
+        <pose>0.011 0 0.25 0 0 0</pose>
+        <geometry><box><size>0.02 0.5 0.5</size></box></geometry>
+      </collision>
+
+      <!-- 0.20 m plane = 0.16 m black square + 0.02 m white margin on each side (10x10 cell image) -->
+      <visual name="tag">
+        <pose>0 0 0.30 0 0 0</pose>
+        <geometry><box><size>0.002 0.2 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://apriltag_dock/materials/scripts</uri>
+            <uri>model://apriltag_dock/materials/textures</uri>
+            <name>ApriltagDock/Marker</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

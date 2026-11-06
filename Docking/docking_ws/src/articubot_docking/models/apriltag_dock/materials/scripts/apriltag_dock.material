@@ -1,0 +1,16 @@
+material ApriltagDock/Marker
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        // If the tag looks MIRRORED in /camera/image_raw, use tag36_11_00000_flipped.png instead.
+        texture tag36_11_00000.png
+        filtering none
+      }
+    }
+  }
+}

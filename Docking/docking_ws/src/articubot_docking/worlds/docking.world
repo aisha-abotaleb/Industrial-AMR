@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- AprilTag dock, 3 m in front of the robot spawn point (0,0), facing the robot (-x direction).
+         Tag centre height = 0.17 m (the robot's camera is at ~0.20 m). -->
+    <include>
+      <name>apriltag_dock</name>
+      <uri>model://apriltag_dock</uri>
+      <pose>3.0 0 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
